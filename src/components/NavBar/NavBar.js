@@ -1,27 +1,20 @@
 import React from 'react'
 import "./NavBar.css"
+import Logo from "./Logo.png"
+import { Link } from 'react-router-dom';
 
 import Carrito from '../Carrito/Carrito';
+
 
 const NavBar = () => {
   return (
     <nav className="NavigationBar">
   <ul className="List-ul">
-    <li>
-      <img className='logo' src="https://latiendaweb.com.uy/wp-content/uploads/2022/09/ICONO-LTW.png"></img>
-    </li>
-    <li>
-      <a href="">Inicio</a>
-    </li>
-    <li>
-      <a href="">Productos</a>
-    </li>
-    <li>
-      <a href="">contacto</a>
-    </li>
-    <li>
-      <Carrito /> 
-    </li>
+    <Link className='link' to="/"><img className='logo' src={Logo} alt="logo"></img></Link>
+    <Link className='link' to="/">Home</Link>
+    <Link className='link' to="/Productos">Productos</Link>
+    <Link className='link' to="/Contacto">Contacto</Link>
+    <Link className='link' to="/Carrito"><Carrito /></Link>
   </ul>
 </nav>
   );

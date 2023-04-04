@@ -1,44 +1,34 @@
 import React, { Component } from "react";
-import "./App.css"
+import "./App.css";
+// REACT ROUTER DOM
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// components
-import Header from "./components/Header/Header"
-import NavBar from "./components/NavBar/NavBar"
+// componentes
+import NavBar from "./components/NavBar/NavBar";
 import Greeting from "./components/Greeting/Greeting";
-import CardProductos from "./components/Productos/Productos";
 
+//Paginas
+import Inicio from "./pages/Inicio/Inicio";
+import Contacto from "./pages/Contacto/Contacto";
+import Carrito from "./components/Carrito/Carrito";
+import Productos from "./pages/Productos/Productos";
 
-
-class App extends Component {
-  render () {
+const App = () => {
     return (
-      <div className="App">
-        <NavBar />
-        <Greeting />
-        <div className="CardSection">
-          <CardProductos
-            nombre="Buzo 1"
-            descripción="buzo deportivo abrigado"
-            precio="1000"
-            img="https://f.fcdn.app/imgs/439ae5/www.hering.com.uy/her/7e15/original/catalogo/EB42-ADNEN-1/460x605/buzo-deportivo-adulto-unissex-con-felpa-azul.jpg"
-          />
-          <CardProductos
-            nombre="Buzo 2"
-            descripción="buzo deportivo abrigado"
-            precio="1500"
-            img="https://f.fcdn.app/imgs/439ae5/www.hering.com.uy/her/7e15/original/catalogo/EB42-ADNEN-1/460x605/buzo-deportivo-adulto-unissex-con-felpa-azul.jpg"
-          />
-          <CardProductos
-            nombre="Buzo 3"
-            descripción="buzo deportivo abrigado"
-            precio="2000"
-            img="https://f.fcdn.app/imgs/439ae5/www.hering.com.uy/her/7e15/original/catalogo/EB42-ADNEN-1/460x605/buzo-deportivo-adulto-unissex-con-felpa-azul.jpg"
-          />
+      <Router>
+        <div className="App">
+          <NavBar />
+          <Greeting />
+          <Routes>
+            <Route path="/" element={<Inicio />} />
+            <Route path="/contactos" element={<Contacto />} />
+            <Route path="/pruductos" element={<Productos />} />
+            <Route path="/carrito" element={<Carrito />} />
+          </Routes>
         </div>
-
-      </div>
+      </Router>
     );
   }
-}
+
 
 export default App;
