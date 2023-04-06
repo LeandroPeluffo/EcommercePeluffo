@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 import Carrito from '../Carrito/Carrito';
 
-
 const NavBar = () => {
   return (
     <nav className="NavigationBar">
