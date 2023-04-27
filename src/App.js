@@ -6,14 +6,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // componentes
 import NavBar from "./components/NavBar";
-import CardProducto from "./components/CardProducto/CardProducto";
+import CardProducto from "./components/ItemListContainer/ItemListContainer";
 
 //Paginas
 import Inicio from "./pages/Inicio/Inicio";
 import Contacto from "./pages/Contacto/Contacto";
 import Carrito from "./pages/Carrito/Carrito";
-import Productos from "./components/CardProductoDisplay/CardProductoDisplay";
 import Categoria from "./pages/Categoria/Categoria"
+import CardProductoDisplay from "./components/ItemList/ItemList";
 
 const App = () => {
   return (
@@ -23,9 +23,10 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/contacto" element={<Contacto />} />
-          <Route path="/productos" element={<Productos />} />
+          <Route path="/productos" element={<CardProducto />} />
           <Route path="/carrito" element={<Carrito />} />
           <Route path="/categoria" element={<Categoria />} />
+          <Route path="/detalle/:idDetalle" element={<CardProductoDisplay/>} /> 
         </Routes>
       </div>
       <div>

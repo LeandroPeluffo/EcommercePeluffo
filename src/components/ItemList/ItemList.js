@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
 
 
-const CardProductoDisplay = ({ ProductosData }) => {
+const ItemList = ({ ProductosData }) => {
   return (
     <Card sx={{ maxWidth: 345, m: 4 }}>
       <CardActionArea>
@@ -28,4 +28,4 @@ const CardProductoDisplay = ({ ProductosData }) => {
 };
 
 
-export default CardProductoDisplay;
+export default ItemList;

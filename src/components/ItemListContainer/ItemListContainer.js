@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
 
-import CardProductoDisplay from "../CardProductoDisplay/CardProductoDisplay";
+import CardProductoDisplay from "../ItemList/ItemList";
 import { Link } from "react-router-dom";
 
 
-import "./CardProducto";
+import "./ItemListContainer";
 import Spinner from "../Spinner/Spinner";
 
 //FIREBASE
 
 import { collection, query, getDocs } from "firebase/firestore";
 import { db } from "../../firebase/firebaseConfig";
+import ItemList from "../ItemList/ItemList";
 
 
-const CardProducto = () => {
+const ItemListContainer = () => {
   const[ProductosData, setProductosData] = useState([]);
   const[isLoading, SetIsLoading] = useState(true);
 
@@ -50,7 +51,7 @@ const CardProducto = () => {
                 style={{ textDecoration: "none" }}
                 key={data.id}
               >
-                <CardProductoDisplay ProductosData={data} />
+                <ItemList ProductosData={data} />
               </Link>
             );
           })}
@@ -60,7 +61,7 @@ const CardProducto = () => {
   );
 };
 
-export default CardProducto;
+export default ItemListContainer;
 
 
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Productos from '../../components/CardProductoDisplay/CardProductoDisplay';
+import Productos from '../../components/ItemList/ItemList';
 
 const Inicio = () => {
     return (
