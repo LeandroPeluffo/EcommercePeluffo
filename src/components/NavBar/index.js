@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 import Logo from "./Logo.png"
-import Carrito from '../Carrito/Carrito';
+import Carrito from '../../pages/Carrito/Carrito';
 
 import "./styles.css"
 

@@ -1,11 +1,11 @@
 import React from 'react'
-import Greeting from "./components/Greeting/Greeting";
-import Productos from '../Productos';
+
+import Productos from '../../components/CardProductoDisplay/CardProductoDisplay';
 
 const Inicio = () => {
     return (
     <>
-      <Greeting />
+      
       <Productos />
     </>
   )
