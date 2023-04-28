@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-
-import CardProductoDisplay from "../ItemList/ItemList";
 import { Link } from "react-router-dom";
-
+import "./ItemListContainer.css"
 
 import "./ItemListContainer";
 import Spinner from "../Spinner/Spinner";
@@ -35,7 +33,7 @@ const ItemListContainer = () => {
       SetIsLoading(false);
     }, 1000);
   }, []);
-  
+  console.log(ProductosData)
   return (
     <>
       {isLoading ? (
@@ -47,7 +45,7 @@ const ItemListContainer = () => {
           {ProductosData.map((data) => {
             return (
               <Link
-                to={`details/${data.id}`}
+                to={`/detalle/${data.id}`}
                 style={{ textDecoration: "none" }}
                 key={data.id}
               >
@@ -62,7 +60,6 @@ const ItemListContainer = () => {
 };
 
 export default ItemListContainer;
-
 
 
 

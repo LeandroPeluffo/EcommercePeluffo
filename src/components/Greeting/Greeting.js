@@ -4,7 +4,7 @@ import "./Greeting.css";
 const Greeting = () => {
     return (
         <div className='greeting'>
-            <h2>Bienvenidos A La Tienda</h2>
+            <h2>BIENVENIDOS A LA TIENDA</h2>
         </div>
     )
 }

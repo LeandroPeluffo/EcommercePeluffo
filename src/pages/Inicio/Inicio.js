@@ -1,12 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Greeting from "../../components/Greeting/Greeting"
+import ItemListContainer from '../../components/ItemListContainer/ItemListContainer';
+import "./Inicio.css"
 
-import Productos from '../../components/ItemList/ItemList';
 
 const Inicio = () => {
     return (
     <>
-      
-      <Productos />
+      <div className='GreetingDiv'><Greeting /></div>
+      <ItemListContainer />
     </>
   )
 }

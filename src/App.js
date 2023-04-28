@@ -12,8 +12,10 @@ import CardProducto from "./components/ItemListContainer/ItemListContainer";
 import Inicio from "./pages/Inicio/Inicio";
 import Contacto from "./pages/Contacto/Contacto";
 import Carrito from "./pages/Carrito/Carrito";
-import Categoria from "./pages/Categoria/Categoria"
-import CardProductoDisplay from "./components/ItemList/ItemList";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import ItemDetail from "./components/ItemDetail/ItemDetail";
+import Categoria from "./pages/Categoria/Categoria";
+
 
 const App = () => {
   return (
@@ -25,12 +27,11 @@ const App = () => {
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/productos" element={<CardProducto />} />
           <Route path="/carrito" element={<Carrito />} />
-          <Route path="/categoria" element={<Categoria />} />
-          <Route path="/detalle/:idDetalle" element={<CardProductoDisplay/>} /> 
+          <Route path="/detalle/:idDetalle" element={<ItemDetailContainer/>} /> 
+          <Route path="/categoria/:Categoria" element={<Categoria />} />
         </Routes>
       </div>
       <div>
-        <CardProducto />
       </div>
     </Router>
     );
