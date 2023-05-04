@@ -5,7 +5,6 @@ const Carrito = () => {
   return (
     <div>
       <ShoppingCartIcon className='logoCarrito' sx={{ color: "white" }}/>
-      <span style={{ color: "white" }}>1</span>
     </div>
   )
 }
