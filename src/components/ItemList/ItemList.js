@@ -4,7 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
-
+import { Button } from "@mui/material";
 
 const ItemList = ({ ProductosData }) => {
   return (
@@ -21,6 +21,9 @@ const ItemList = ({ ProductosData }) => {
           <Typography variant="body2" color="text.secondary">
             $ {ProductosData.precio} | stock: {ProductosData.stock}
           </Typography>
+          <Button>
+          Agregar al Carrito
+          </Button>
         </CardContent>
       </CardActionArea>
     </Card>

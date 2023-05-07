@@ -5,9 +5,11 @@ import { useParams } from "react-router-dom";
 import { collection, query, getDocs, where } from "firebase/firestore";
 import { db } from "../../firebase/firebaseConfig";
 
+// COMPONENTS
+
 import ItemListContainer from "../../components/ItemListContainer/ItemListContainer";
 
-// COMPONENTS
+
 
 const Categoria = () => {
   const [ProductosData, setProductosData] = useState([]);

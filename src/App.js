@@ -13,7 +13,6 @@ import Inicio from "./pages/Inicio/Inicio";
 import Contacto from "./pages/Contacto/Contacto";
 import Carrito from "./pages/Carrito/Carrito";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
-import ItemDetail from "./components/ItemDetail/ItemDetail";
 import Categoria from "./pages/Categoria/Categoria";
 
 
