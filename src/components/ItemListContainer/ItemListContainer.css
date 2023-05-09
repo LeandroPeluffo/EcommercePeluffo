@@ -1,11 +1,17 @@
-.CardListContainer{
-  display:flex;
-  justify-content: space-around;
-  align-items: center;
+.CardListContainer {
+  display: flex;
   flex-wrap: wrap;
 }
 
-.Spinner{
+.CardListItem {
+  display: flex;
+  flex: 1 0 21%; /* explanation below */
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.Spinner {
   position: absolute;
   top: 50%;
   left: 50%;

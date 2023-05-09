@@ -7,7 +7,7 @@ import { db } from "../../firebase/firebaseConfig";
 
 // COMPONENTS
 
-import ItemListContainer from "../../components/ItemListContainer/ItemListContainer";
+import ItemList from "../../components/ItemList/ItemList";
 
 
 
@@ -38,7 +38,7 @@ const Categoria = () => {
     >
       <h1>Productos Por Categoria</h1>
       {ProductosData.map((data) => {
-        return <ItemListContainer ProductosData={data} key={data.id} />;
+        return <ItemList ProductosData={data} key={data.id} />;
       })}
     </div>
   );

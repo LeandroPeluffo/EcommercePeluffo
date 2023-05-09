@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./ItemListContainer.css"
+import "./ItemListContainer.css";
 
 import "./ItemListContainer";
 import Spinner from "../Spinner/Spinner";
@@ -11,10 +11,9 @@ import { collection, query, getDocs } from "firebase/firestore";
 import { db } from "../../firebase/firebaseConfig";
 import ItemList from "../ItemList/ItemList";
 
-
 const ItemListContainer = () => {
-  const[ProductosData, setProductosData] = useState([]);
-  const[isLoading, SetIsLoading] = useState(true);
+  const [ProductosData, setProductosData] = useState([]);
+  const [isLoading, SetIsLoading] = useState(true);
 
   useEffect(() => {
     const getProductos = async () => {
@@ -23,7 +22,7 @@ const ItemListContainer = () => {
       const querySnapshot = await getDocs(q);
 
       querySnapshot.forEach((doc) => {
-        docs.push({ ...doc.data(), id: doc.id});
+        docs.push({ ...doc.data(), id: doc.id });
       });
 
       setProductosData(docs);
@@ -33,7 +32,7 @@ const ItemListContainer = () => {
       SetIsLoading(false);
     }, 1000);
   }, []);
-  console.log(ProductosData)
+  console.log(ProductosData);
   return (
     <>
       {isLoading ? (
@@ -45,6 +44,7 @@ const ItemListContainer = () => {
           {ProductosData.map((data) => {
             return (
               <Link
+                className="CardListItem"
                 to={`/detalle/${data.id}`}
                 style={{ textDecoration: "none" }}
                 key={data.id}
@@ -60,41 +60,6 @@ const ItemListContainer = () => {
 };
 
 export default ItemListContainer;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
 import React from 'react';
@@ -149,4 +114,3 @@ const CardProducto = ({ data }) => {
 }
 
 export default CardProducto*/
-
